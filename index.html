@@ -1,12 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>My Website</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="nav-brand">
+        <img class="image-brand" src="./asset/logoo.png!bw700" alt="" />
+      </div>
+
+      <div class="nav-bar">
+        <div class="nav-item"><a href="#nav-bar" style="text-decoration: none; color:black">Home</a></div>
+        <div class="nav-item"><a href="#hero" style="text-decoration: none; color:black">Our Profile</a></div>
+        <div class="nav-item"><a href="#section" style="text-decoration: none; color:black">Portfolio</a></div>
+        <div class="nav-item"><a href="#message-us" style="text-decoration: none; color:black">Message Us</a></div>
+      </div>
+    </div>
+    <div id="hero" class="image-cover">
+      <h4 class="text-cover">Hi <span id="nama"></span>, Welcome to Website.</h4>
+      <p class="text-cover" style="margin-top: -3em">Ini website pertamaku.</p>      
+      <div class="lihat-contain">
+        <button class="lihat" >Lihat Selengkapnya</button>
+      </div>
+    </div>
+    <div>
+      <img class="img-slideshow" src="asset/pemandangan 1.jpg" alt="" >
+      <img class="img-slideshow" src="asset/pemandangan 2.jpg" alt="">
+      <img class="img-slideshow" src="asset/pemandangan 3.jpg" alt="">
+      <button onclick="plusDivs(-1)" style="border-radius: 7px; border: none;">Previous</button>
+      <button onclick="plusDivs(1)" style="border-radius: 7px; border: none;">Next</button>
+    </div>
+
+    <hr>
+    <div id="section" class="background-quarter">
+      <h3 style="font-family: sans-serif; padding: 0 0 0 13px;">Headquarters</h3>
+      <div class="wrapper">
+        <div class="image-container">
+          <div class="headquarter-image1"></div>
+          <p>Jakarta</p>
+        </div>
+        <div class="image-container">
+          <div class="headquarter-image2"></div>
+          <p>Bandung</p>
+        </div>
+        <div class="image-container">
+          <div class="headquarter-image3"></div>
+          <p>Surabaya</p>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <h3 style="font-family: sans-serif; margin-left : 5em">Message Us</h3>
+      <br>
+    <div id="message-us" class="message-us">
+      
+      <form name="message-form" onsubmit="return validateForm()">
+        <table>
+          <tr>
+            <td> <span style="color:rgb(70, 139, 111)"> <b>Nama</b></span> </td>
+            <td>:</td>
+            <td><input type="text" name="full-name" placeholder="Nama"/></td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+          <tr>
+            <td> <span style="color:rgb(70, 139, 111)"> <b>Tanggal Lahir</b></span> </td>
+            <td>:</td>
+            <td><input type="date" name="tanggal-lahir" /></td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+          <tr>
+            <td> <span style="color:rgb(70, 139, 111)"> <b>Gender</b></span> </td>
+            <td>:</td>
+            <td><input type="radio" name="gender" value="Laki-Laki" >Laki-Laki</input>
+              <input type="radio" name="gender" value="Perempuan" >Perempuan</input></td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+          <tr>
+            <td> <span style="color:rgb(70, 139, 111)"> <b>Pesan</b></span> </td>
+            <td>:</td>
+            <td><textarea name="pesan" id="pesan" placeholder="Pesan"></textarea></td>
+          </tr>  
+        </table>
+        <input type="submit" value="Submit" class="button">
+      </form>
+      <div class="tampil">
+        <table>
+          <tr>            
+            <td><p>Nama</p></td>
+            <td><p>:</p></td>
+            <td><span id="sender-full-name">      </span></td>
+          </tr>
+          <tr>
+            <td><p>Tanggal Lahir  </p></td>
+            <td><p>:</p></td>
+            <td><span id="sender-tanggal-lahir">  </span></td>
+          </tr>
+          <tr>
+            <td><p>Jenis Kelamin  </p></td>
+            <td><p>:</p></td>
+            <td><span id="sender-gender">         </span></td>
+          </tr>
+          <tr>
+            <td><p>Pesan</p> </td>         
+            <td><p>:</p></td>
+            <td><span id="sender-pesan">          </span></td>
+          </tr>
+        </table>
+        
+      </div>
+    </div>
     
-</body>
+    <hr>
+    <div class="footer">
+      <footer>Created By Sabilul Muttaqin</footer>
+
+      <script src="./js/script.js"></script>
+    </div>
+  </body>
 </html>
