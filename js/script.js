@@ -1,5 +1,5 @@
-// var name = prompt("Masukkan nama anda");
-// var element = (document.getElementById("nama").innerText = name);
+var name = prompt("Masukkan nama anda");
+var element = (document.getElementById("nama").innerText = name);
 
 function validateForm() {
   var name = document.forms["message-form"]["full-name"].value;
